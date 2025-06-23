@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="content">
+    <h2>Book an Appointment</h2>
+
+    <!-- Show success or error messages -->
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li class="message {{ message.tags }}">{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <form method="post" class="form">
+        {% csrf_token %}
+
+        <div class="form-section">
+            <h3>Your Details</h3>
+            {{ customer_form.as_p }}
+        </div>
+
+        <div class="form-section">
+            <h3>Appointment Details</h3>
+            {{ appointment_form.as_p }}
+        </div>
+
+        <button type="submit" class="btn">Book Appointment</button>
+    </form>
+
+    <a href="/" class="back-link">Back to Home</a>
+</div>
+{% endblock %}
+
