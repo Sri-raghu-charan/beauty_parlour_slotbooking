@@ -1,1 +1,1 @@
-# beaautyparlourslotbooking
+# beauty_parlour_slotbooking
