@@ -1,4 +1,5 @@
 {
+  "version": 2,
   "builds": [
     {
       "src": "beauty_parlour/wsgi.py",
@@ -10,8 +11,5 @@
       "src": "/(.*)",
       "dest": "beauty_parlour/wsgi.py"
     }
-  ],
-  "env": {
-    "DJANGO_SETTINGS_MODULE": "beauty_parlour.settings"
-  }
+  ]
 }
